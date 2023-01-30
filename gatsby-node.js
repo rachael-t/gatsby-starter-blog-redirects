@@ -14,13 +14,6 @@ const blogPost = path.resolve(`./src/templates/blog-post.js`)
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
 exports.createPages = async ({ graphql, actions, reporter }) => {
-    const { createRedirect } = actions
-  
-    createRedirect({
-      fromPath: `/hello-world/*`,
-      toPath: `https://www.gatsbyjs.com/`,
-      statusCode: 200,
-    })
   
   const { createPage } = actions
 
@@ -68,6 +61,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  const { createRedirect } = actions
+  
+  createRedirect({
+    fromPath: `/hello-world/*`,
+    toPath: `/my-second-post/`,
+  })
 }
 
 /**
