@@ -65,7 +65,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createRedirect } = actions
   
   createRedirect({
-    fromPath: `/hello-world/*`,
+    fromPath: `/rachael`,
     toPath: `https://www.gatsbyjs.com/*`,
     statusCode: 200,
   })
